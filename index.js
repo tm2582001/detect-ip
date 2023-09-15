@@ -8,7 +8,7 @@ app.get("/",(req,res)=>{
     res.json({Ip:req.ip});
 })
 
-const port = 8080
+const port = process.env.PORT || 8080
 
 app.listen(port,()=>{
     console.log(`running device on ${port}`)
