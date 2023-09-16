@@ -14,7 +14,8 @@ app.get("/",(req,res)=>{
 
     let ip_details = req.socket.address();
           console.log(ip_details); 
-    res.json({Ip:req.ip, IPV6: ip_details});
+    console.log(req.socket.remoteAddress);
+    res.json({Ip:req.ip, IPV6: req.socket.remoteAddress});
 })
 
 const port = process.env.PORT || 8080
