@@ -11,6 +11,9 @@ app.get("/",(req,res)=>{
     // if (forwardedIpsStr) {
     //    IP = forwardedIps = forwardedIpsStr.split(',')[0];  
     // }
+
+    let ip_details = req.socket.address();
+          console.log(ip_details); 
     console.log(req.socket.remoteAddres);
     res.json({Ip:req.ip, IPV6: req.socket.remoteAddres});
 })
