@@ -27,7 +27,7 @@ const listenServer = () => {
 };
 
 // Use IPv4 address to listen on IPv4
-app.listen(port, listenServer);
+app.listen(port, "0.0.0.0",listenServer);
 
 // Use IPv6 address to listen on IPv6.
 // app.listen(port, '2401:4900:169e:80c3:11e9:63ba:1f81:d224', listenServer);
